@@ -52,4 +52,5 @@ if string.find(data.Content, "太平洋真彩色") then
             }
         )
 end
+    return 1
 end
