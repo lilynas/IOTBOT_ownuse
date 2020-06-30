@@ -7,6 +7,9 @@ function ReceiveFriendMsg(CurrentQQ, data)
     return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
+    if data.FromUserId == 1606270092 then
+        return 1
+    end
 if string.find(data.Content, "天气之子") == 1 then
     luaRes =
     Api.Api_SendMsg(

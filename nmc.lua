@@ -6,8 +6,10 @@ function ReceiveFriendMsg(CurrentQQ, data)
     return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
-
-if string.find(data.Content, "中国降水量") then 
+    if data.FromUserId == 1606270092 then
+        return 1
+    end
+if string.find(data.Content, "中国降水量") then
         response, error_message =
             http.request(
             "GET",

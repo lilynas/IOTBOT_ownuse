@@ -6,6 +6,9 @@ function ReceiveFriendMsg(CurrentQQ, data)
     return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
+    if data.FromUserId == 1606270092 then
+        return 1
+    end
 if string.find(data.Content, "中国真彩色") then --发送真彩色获取风云4A最新的真彩色高清图像
         response, error_message =
             http.request(
