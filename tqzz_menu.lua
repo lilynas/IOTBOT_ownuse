@@ -7,12 +7,12 @@ function ReceiveFriendMsg(CurrentQQ, data)
     return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
-if string.find(data.Content, "天气之子") == 1 then				
-    luaRes =            
-    Api.Api_SendMsg(--调用发消息的接口
+if string.find(data.Content, "天气之子") == 1 then
+    luaRes =
+    Api.Api_SendMsg(
 					CurrentQQ,
 					    {
-					    toUser = data.FromUin, --回复当前消息的来源群ID
+					    toUser = data.FromGroupId, --回复当前消息的来源群ID
 					    sendToType = 2, --2发送给群1发送给好友3私聊
 					    sendMsgType = "TextMsg", --进行文本复读回复
 					    groupid = 0, --不是私聊自然就为0咯
