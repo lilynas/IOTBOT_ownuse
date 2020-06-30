@@ -5,6 +5,9 @@ local http = require("http")
 local unrealtime = os.time()-1800
 local min = (math.floor((os.date("%M",unrealtime)/10)))*10
 local date = os.date("%Y-%m-%d-%H",unrealtime)
+if min == 0 then
+    min = "00"
+end
 
 function ReceiveFriendMsg(CurrentQQ, data)
     return 1
