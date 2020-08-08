@@ -1,4 +1,4 @@
-﻿local log = require("log")
+local log = require("log")
 local Api = require("coreApi")
 local json = require("json")
 local http = require("http")
@@ -51,6 +51,9 @@ end
                 atUser = 0 --是否 填上data.FromUserId就可以复读给他并@了
             }
         )
-     end
+        html = nil
+        str = nil
+	    image = nil
+end
     return 1
 end
